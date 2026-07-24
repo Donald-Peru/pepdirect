@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Therapy Centers | Peptide Directory</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">Peptide Directory</a>
+      <nav class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./peptides.html">Peptides</a>
+        <a href="./therapy-centers.html">Therapy Centers</a>
+        <a href="./peptide-vendors.html">Peptide Vendors</a>
+        <a href="./admin.html" class="btn btn-primary header-auth-btn">Login / Signup</a>
+        <a href="./admin.html" style="display:none;">Admin</a>
+      </nav>
+    </header>
+
+    <main id="app" class="page-shell">
+      <section class="hero">
+        <h1>Peptide therapy centers</h1>
+        <p>Use this page to catalog clinics, treatment centers, and integrative wellness providers offering peptide-based care.</p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h3>Suggested schema</h3>
+          <p>name, slug, city, state, country, address, phone, email, website, specialty, services_offered, accreditation, accepts_new_patients, description, image_url, created_at, updated_at.</p>
+        </article>
+        <article class="card">
+          <h3>Useful filters</h3>
+          <p>Location, specialty, accepts new patients, accreditation, and services offered.</p>
+        </article>
+      </section>
+
+      <section class="admin-grid" style="margin-top:1.5rem;">
+        <section class="form-card">
+          <h3>Add a therapy center</h3>
+          <form id="center-form">
+            <label>Name
+              <input name="name" placeholder="Center name" required />
+            </label>
+            <label>Slug
+              <input name="slug" placeholder="center-slug" />
+            </label>
+            <label>City
+              <input name="city" placeholder="City" />
+            </label>
+            <label>State
+              <input name="state" placeholder="State" />
+            </label>
+            <label>Country
+              <input name="country" placeholder="Country" />
+            </label>
+            <label>Address
+              <input name="address" placeholder="Street address" />
+            </label>
+            <label>Phone
+              <input name="phone" placeholder="Phone number" />
+            </label>
+            <label>Email
+              <input name="email" placeholder="contact@example.com" />
+            </label>
+            <label>Website
+              <input name="website" placeholder="https://" />
+            </label>
+            <label>Specialty
+              <input name="specialty" placeholder="Peptide therapy, longevity, wellness" />
+            </label>
+            <label>Services offered
+              <textarea name="services_offered" placeholder="List services"></textarea>
+            </label>
+            <label>Accreditation
+              <input name="accreditation" placeholder="Accreditation or licensing" />
+            </label>
+            <label>Accepts new patients
+              <select name="accepts_new_patients">
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </label>
+            <label>Description
+              <textarea name="description" placeholder="Description"></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Preview record</button>
+          </form>
+        </section>
+
+        <section class="list-card">
+          <h3>Preview JSON</h3>
+          <pre id="center-output" class="small">{}</pre>
+        </section>
+      </section>
+    </main>
+
+    <script>
+      const form = document.getElementById('center-form');
+      const output = document.getElementById('center-output');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const data = Object.fromEntries(new FormData(form).entries());
+        output.textContent = JSON.stringify(data, null, 2);
+      });
+    </script>
+  </body>
+</html>

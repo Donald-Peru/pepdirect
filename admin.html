@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Peptide Directory</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">Peptide Directory</a>
+      <nav class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./peptides.html">Peptides</a>
+        <a href="./therapy-centers.html">Therapy Centers</a>
+        <a href="./peptide-vendors.html">Peptide Vendors</a>
+        <a href="./admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <main id="app" class="page-shell">
+      <section class="hero">
+        <h1>Admin dashboard</h1>
+        <p>This dashboard is currently a placeholder for the upcoming database-backed workflow. It is not active for public use yet.</p>
+      </section>
+
+      <section class="grid" style="opacity:0.8;">
+        <article class="card">
+          <h3>Peptides</h3>
+          <p>Manage peptide records with status, category, summary, research notes, and source links.</p>
+          <a href="/peptides">Open peptide manager</a>
+        </article>
+        <article class="card">
+          <h3>Therapy centers</h3>
+          <p>Manage locations, specialties, accreditation, and contact details for peptide therapy providers.</p>
+          <a href="/therapy-centers">Open centers manager</a>
+        </article>
+        <article class="card">
+          <h3>Peptide vendors</h3>
+          <p>Manage makers, suppliers, and vendors with manufacturing details and certifications.</p>
+          <a href="/peptide-vendors">Open vendor manager</a>
+        </article>
+      </section>
+
+      <section class="form-card" style="margin-top:1.5rem;">
+        <h3>Upcoming admin features</h3>
+        <ul>
+          <li>Add, edit, and delete records from a real database</li>
+          <li>User roles for admin, editor, and contributor access</li>
+          <li>Role-based permissions for peptides, centers, vendors, and blogs</li>
+          <li>Blog and SEO content management</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

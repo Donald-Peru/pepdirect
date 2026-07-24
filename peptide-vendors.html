@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peptide Vendors | Peptide Directory</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">Peptide Directory</a>
+      <nav class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./peptides.html">Peptides</a>
+        <a href="./therapy-centers.html">Therapy Centers</a>
+        <a href="./peptide-vendors.html">Peptide Vendors</a>
+        <a href="./admin.html" class="btn btn-primary header-auth-btn">Login / Signup</a>
+        <a href="./admin.html" style="display:none;">Admin</a>
+      </nav>
+    </header>
+
+    <main id="app" class="page-shell">
+      <section class="hero">
+        <h1>Peptide vendors and makers</h1>
+        <p>Use this page to list peptide makers, manufacturers, and vendors in the USA and internationally.</p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h3>Suggested schema</h3>
+          <p>name, slug, city, state, country, website, phone, email, specialty, certifications, manufacturing_type, contact_person, description, image_url, created_at, updated_at.</p>
+        </article>
+        <article class="card">
+          <h3>Helpful metadata</h3>
+          <p>Location, manufacturing type, certifications, contact person, and specialty focus.</p>
+        </article>
+      </section>
+
+      <section class="admin-grid" style="margin-top:1.5rem;">
+        <section class="form-card">
+          <h3>Add a vendor</h3>
+          <form id="vendor-form">
+            <label>Name
+              <input name="name" placeholder="Vendor or maker name" required />
+            </label>
+            <label>Slug
+              <input name="slug" placeholder="vendor-slug" />
+            </label>
+            <label>City
+              <input name="city" placeholder="City" />
+            </label>
+            <label>State
+              <input name="state" placeholder="State" />
+            </label>
+            <label>Country
+              <input name="country" placeholder="Country" />
+            </label>
+            <label>Website
+              <input name="website" placeholder="https://" />
+            </label>
+            <label>Phone
+              <input name="phone" placeholder="Phone number" />
+            </label>
+            <label>Email
+              <input name="email" placeholder="contact@example.com" />
+            </label>
+            <label>Specialty
+              <input name="specialty" placeholder="Research-grade peptides, custom synthesis" />
+            </label>
+            <label>Certifications
+              <input name="certifications" placeholder="ISO, GMP, FDA registration" />
+            </label>
+            <label>Manufacturing type
+              <input name="manufacturing_type" placeholder="Custom synthesis, GMP, research grade" />
+            </label>
+            <label>Contact person
+              <input name="contact_person" placeholder="Contact name" />
+            </label>
+            <label>Description
+              <textarea name="description" placeholder="Description"></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Preview record</button>
+          </form>
+        </section>
+
+        <section class="list-card">
+          <h3>Preview JSON</h3>
+          <pre id="vendor-output" class="small">{}</pre>
+        </section>
+      </section>
+    </main>
+
+    <script>
+      const form = document.getElementById('vendor-form');
+      const output = document.getElementById('vendor-output');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const data = Object.fromEntries(new FormData(form).entries());
+        output.textContent = JSON.stringify(data, null, 2);
+      });
+    </script>
+  </body>
+</html>

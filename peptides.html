@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peptides | Peptide Directory</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">Peptide Directory</a>
+      <nav class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./peptides.html">Peptides</a>
+        <a href="./therapy-centers.html">Therapy Centers</a>
+        <a href="./peptide-vendors.html">Peptide Vendors</a>
+        <a href="./admin.html" class="btn btn-primary header-auth-btn">Login / Signup</a>
+        <a href="./admin.html" style="display:none;">Admin</a>
+      </nav>
+    </header>
+
+    <main id="app" class="page-shell">
+      <section class="hero">
+        <h1>Peptide records</h1>
+        <p>Use this page as the public directory view and the admin form template for peptide entries. The database connection is paused for now, so data is prepared for later wiring into Supabase.</p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h3>Suggested schema</h3>
+          <p>name, slug, status, category, summary, description, mechanism, approved_use, research_notes, safety_notes, source_links, dosing_notes, created_at, updated_at.</p>
+        </article>
+        <article class="card">
+          <h3>Suggested statuses</h3>
+          <p>Research, FDA Approved, Clinical, Experimental, Investigational.</p>
+        </article>
+      </section>
+
+      <section class="admin-grid" style="margin-top:1.5rem;">
+        <section class="form-card">
+          <h3>Add a peptide</h3>
+          <form id="peptide-form">
+            <label>Name
+              <input name="name" placeholder="Example: BPC-157" required />
+            </label>
+            <label>Slug
+              <input name="slug" placeholder="bpc-157" />
+            </label>
+            <label>Status
+              <select name="status">
+                <option>Research</option>
+                <option>FDA Approved</option>
+                <option>Clinical</option>
+                <option>Experimental</option>
+              </select>
+            </label>
+            <label>Category
+              <input name="category" placeholder="Recovery, Metabolic, Cognitive" />
+            </label>
+            <label>Summary
+              <input name="summary" placeholder="Short summary" />
+            </label>
+            <label>Description
+              <textarea name="description" placeholder="Detailed description"></textarea>
+            </label>
+            <label>Mechanism
+              <textarea name="mechanism" placeholder="How it works"></textarea>
+            </label>
+            <label>Approved use
+              <textarea name="approved_use" placeholder="Approved or clinical use"></textarea>
+            </label>
+            <label>Research notes
+              <textarea name="research_notes" placeholder="Research context"></textarea>
+            </label>
+            <label>Safety notes
+              <textarea name="safety_notes" placeholder="Safety notes"></textarea>
+            </label>
+            <label>Source links
+              <textarea name="source_links" placeholder="https://example.com"></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Preview record</button>
+          </form>
+        </section>
+
+        <section class="list-card">
+          <h3>Preview JSON</h3>
+          <pre id="schema-output" class="small">{}</pre>
+        </section>
+      </section>
+    </main>
+
+    <script>
+      const form = document.getElementById('peptide-form');
+      const output = document.getElementById('schema-output');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const data = Object.fromEntries(new FormData(form).entries());
+        output.textContent = JSON.stringify(data, null, 2);
+      });
+    </script>
+  </body>
+</html>

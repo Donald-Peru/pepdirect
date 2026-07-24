@@ -1,0 +1,115 @@
+{
+  "peptides": [
+    {
+      "id": "peptides-1",
+      "name": "BPC-157",
+      "slug": "bpc-157",
+      "status": "Research",
+      "summary": "A peptide studied for tissue recovery and inflammation support.",
+      "description": "BPC-157 is one of the most discussed peptides in the regenerative medicine space. It is commonly featured in research discussions around tissue repair, gut healing, and inflammation response.",
+      "category": "Recovery",
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "peptides-2",
+      "name": "TB-500",
+      "slug": "tb-500",
+      "status": "Research",
+      "summary": "A peptide linked to cell migration and recovery support studies.",
+      "description": "TB-500 is frequently discussed in connection with regenerative and recovery-focused protocols. It is often presented as a peptide of interest for movement, flexibility, and tissue support research.",
+      "category": "Recovery",
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "peptides-3",
+      "name": "Semaglutide",
+      "slug": "semaglutide",
+      "status": "FDA Approved",
+      "summary": "A GLP-1 medication used for metabolic health and weight management.",
+      "description": "Semaglutide is an FDA-approved therapy that has become a prominent example of peptide-based medicine in mainstream care.",
+      "category": "Metabolic",
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "therapyCenters": [
+    {
+      "id": "therapyCenters-1",
+      "name": "Northstar Wellness Collective",
+      "slug": "northstar-wellness-collective",
+      "location": "Austin, Texas",
+      "focus": "Peptide therapy, longevity, and concierge care",
+      "website": "https://example.com",
+      "description": "A modern clinic offering personalized peptide therapy plans and wellness-focused support.",
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "therapyCenters-2",
+      "name": "Harbor Integrative Medicine",
+      "slug": "harbor-integrative-medicine",
+      "location": "Miami, Florida",
+      "focus": "Functional medicine and peptide-based recovery programs",
+      "website": "https://example.com",
+      "description": "An integrative practice focused on personalized medicine and health optimization.",
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "makers": [
+    {
+      "id": "makers-1",
+      "name": "Peptide Sciences",
+      "slug": "peptide-sciences",
+      "location": "Florida, USA",
+      "focus": "Research-grade peptide manufacturing",
+      "website": "https://example.com",
+      "description": "A peptide manufacturer focused on high-purity peptide products and quality control.",
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "makers-2",
+      "name": "Bachem Americas",
+      "slug": "bachem-americas",
+      "location": "Torrance, California",
+      "focus": "Custom peptide synthesis and development",
+      "website": "https://example.com",
+      "description": "A long-standing peptide manufacturer with a strong reputation in research and clinical supply.",
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "blogs-1",
+      "title": "How peptide therapy directories are reshaping patient access",
+      "slug": "how-peptide-therapy-directories-are-reshaping-patient-access",
+      "category": "Industry",
+      "excerpt": "A look at how curated lists are helping patients and providers discover precision options.",
+      "content": "Modern peptide directories are becoming a practical reference for patients, researchers, and clinics. Clear listings improve trust, transparency, and access to information.",
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "users-1",
+      "name": "Alicia Chen",
+      "email": "alicia@example.com",
+      "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "role": "Admin",
+      "permissions": [
+        "peptides",
+        "therapyCenters",
+        "makers",
+        "blogs",
+        "users"
+      ],
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ]
+}

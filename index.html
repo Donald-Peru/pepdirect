@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peptide Directory</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" data-route="/">Peptide Directory</a>
+      <nav class="nav-links">
+        <a href="./index.html" data-route="/">Home</a>
+        <a href="./peptides.html" data-route="/peptides">Peptides</a>
+        <a href="./therapy-centers.html" data-route="/centers">Therapy Centers</a>
+        <a href="./peptide-vendors.html" data-route="/makers">Makers</a>
+        <a href="./index.html" data-route="/blog">Blog</a>
+        <a href="./admin.html" data-route="/admin" class="btn btn-primary header-auth-btn">Login / Signup</a>
+        <a href="./admin.html" data-route="/admin" style="display:none;">Admin</a>
+      </nav>
+    </header>
+
+    <main id="app" class="page-shell"></main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
